@@ -22,7 +22,7 @@ Web application composed by:
 
 ### Diagram
 
-![diagram](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230307%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230307T184037Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7f1d859ae8054612a353b984dde99baee5e84a7f7852df69c6e2ae359e3831a5)
+![diagram](https://github.com/CarolDianeHA/holbertonschool-AirBnB_clone/blob/caroldiane/image/Project%20Diagram.png)
 
 ## Execution
 
