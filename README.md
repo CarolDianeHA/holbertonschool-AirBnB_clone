@@ -1,5 +1,7 @@
 # AirBnB clone project
 
+![logo](https://github.com/CarolDianeHA/holbertonschool-AirBnB_clone/blob/caroldiane/image/hbnb%20logo.png)
+
 ## Project Description
 
 The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/).
@@ -67,3 +69,9 @@ $
 ```
 
 All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
+
+## Authors
+
+* Carol Diane Hernández |   <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" /> [GitHub](https://github.com/CarolDianeHA) |
+
+* Abigail Castro | <img alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />[GitHub](https://github.com/AbigailCastroFigueroa) |
