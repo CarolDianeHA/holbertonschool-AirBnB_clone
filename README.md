@@ -2,7 +2,7 @@
 
 ## Project Description
 
-The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://intranet.hbtn.io/rltoken/FrRTcvuF5L9wWDzFE9k01A).
+The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/).
 
 Web application composed by:
 
