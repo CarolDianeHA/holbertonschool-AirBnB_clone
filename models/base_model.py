@@ -34,4 +34,6 @@ class BaseModel:
         """Returns dictionary representation of the instance's attributes"""
         dict = self.__dict__.copy()
         dict['__class__'] = type(self).__name__
+        dict['created_at'] = dict['created_at'].isoformat()
+        dict['updated_at'] = dict['updated_at'].isoformat()
         return dict
