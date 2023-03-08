@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Class BaseModel."""
 
 import uuid
@@ -9,6 +10,7 @@ class BaseModel:
 
     def __init__(self):
         """Instances of the base model class.
+
         Args:
             id: unique identification.
             created_at: datetime - datetime when an instance is created.
