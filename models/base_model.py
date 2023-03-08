@@ -3,12 +3,13 @@
 
 import uuid
 from datetime import datetime
+import json
 
 
 class BaseModel:
     """Class that defines all common attributes/methods for other classes."""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """Instances of the base model class.
 
         Args:
@@ -19,6 +20,10 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
+        if args:
+            pass
+        else:
+            json.dumps(kwargs)
 
     def __str__(self):
         """Print class name, id, and dictionary representation."""
