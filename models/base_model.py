@@ -22,6 +22,10 @@ class BaseModel:
         self.updated_at = datetime.now()
         if args:
             pass
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key != '__class__':
+                    setattr(self, key, value)
         else:
             json.dumps(kwargs)
 
