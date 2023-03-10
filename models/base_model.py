@@ -4,6 +4,7 @@
 import uuid
 from datetime import datetime
 import json
+import models
 
 
 class BaseModel:
@@ -17,17 +18,21 @@ class BaseModel:
             created_at: datetime - datetime when an instance is created.
             updated_at: datetime - datetime when an instance is modified.
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
         if args:
             pass
         elif kwargs:
             for key, value in kwargs.items():
                 if key != '__class__':
                     setattr(self, key, value)
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+
         else:
-            json.dumps(kwargs)
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = self.created_at
+            models.storage.new(self)
 
     def __str__(self):
         """Print class name, id, and dictionary representation."""
@@ -37,6 +42,7 @@ class BaseModel:
     def save(self):
         """Update attribute with the current datetime."""
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Return dictionary representation of the instance's attributes."""
