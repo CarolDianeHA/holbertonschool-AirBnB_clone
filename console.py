@@ -35,19 +35,26 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing on empty line."""
         pass
 
-    def do_create(self, arg):
+    def do_create(self, line):
         """Create a new object."""
-        new = BaseModel()
-        print(new.id)
+        arg = line.split()
+        if len(arg) == 0:
+            print("** class name missing **")
+        elif arg[0] not in classGroup.keys():
+            print("** class doesn't exist **")
+        else:
+            new = BaseModel()
+            print(new.id)
+            models.storage.save()
 
     def do_show(self, arg):
         """Show name and id of the instance."""
         args_list = arg.split()
-        if args_list[0] == "":
+        if len(args_list) == 0:
             print("** class name missing **")
         elif args_list[0] not in classGroup.keys():
             print("** class doesn't exist **")
-        elif len(args_list) < 2:
+        elif len(args_list) == 1:
             print("** instance id missing **")
         else:
             id_object = "{}.{}".format(args_list[0], args_list[1])
