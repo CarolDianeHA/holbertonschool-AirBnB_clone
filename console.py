@@ -10,7 +10,6 @@ from models.review import Review
 from models.state import State
 from models.user import User
 import models
-import shlex
 
 
 classGroup = {"Amenity": Amenity, "BaseModel": BaseModel,
@@ -83,7 +82,18 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Print a string representation of all instances."""
-        pass
+        all_list = []
+
+        if arg:
+            split = arg.split(" ")[0]
+            if arg not in classGroup:
+                print("** class doesn't exist **")
+                return False
+            data = models.storage.all()
+            for key, value in data.items():
+                all_list.append(str(value))
+            else:
+                print(all_list)
 
     def do_update(self, arg):
         """Update an instance with the information given."""
