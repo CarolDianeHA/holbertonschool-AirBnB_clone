@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """Class FileStorage."""
 
 import json
@@ -31,13 +31,10 @@ class FileStorage:
         """Serialize objects to the Json file."""
         objects_dict = {}
 
-        for key, value in self.__objects.items():
-            objects_dict[key] = value.to_dict()
-
         with open(self.__file_path, mode='w', encoding='utf-8') as file:
             for key, value in self.__objects.items():
                 objects_dict[key] = value.to_dict()
-            json.dump(objects_dict, file, indent=2)
+            json.dump(objects_dict, file)
 
     def reload(self):
         """Deserialize the json file."""
