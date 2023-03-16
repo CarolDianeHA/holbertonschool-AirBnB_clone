@@ -1,14 +1,17 @@
-# AirBnB clone project
+# AirBnB clone project/Console
 
 ![logo](https://github.com/CarolDianeHA/holbertonschool-AirBnB_clone/blob/caroldiane/image/hbnb%20logo.png)
 
 ## Project Description
 
-The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/).
+The end goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/). This phase just will complete the console.
 
 Web application composed by:
 
 * A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
+
+Next Phases:
+
 * A website (the front-end) that shows the final product to everybody: static and dynamic
 * A database or files that store data (data = objects)
 * An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
@@ -17,14 +20,21 @@ Web application composed by:
 
 * Unittest - and please work all together on tests cases
 * Python packages concept page
-* Serialization/Deserialization
+* Serialization/Deserialization (Json)
 * `*args`, `**kwargs`
 * datetime
-* More coming soon!
 
 ### Diagram
 
 ![diagram](https://github.com/CarolDianeHA/holbertonschool-AirBnB_clone/blob/caroldiane/image/Project%20Diagram.png)
+
+## Console commands
+
+* `create` - Creates a new instance of BaseMode, saves it to Json file, prints id and manage some errors.
+* `show` - Prints the string representation of an instance based on the class name and id.
+* `destroy` - Deletes an instance based on the class name and id, and saves the change into the Json file.
+* `all` - Prints all string representation of all instances based or not on the class name.
+* `update`- Updates an instance based on the class name and id by adding or updating attributes, and save the changes into the Json file.
 
 ## Execution
 
