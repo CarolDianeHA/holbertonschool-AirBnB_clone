@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Class BaseModel."""
 
-import uuid
+from uuid import uuid4
 from datetime import datetime
 import json
 import models
@@ -23,12 +23,12 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key != '__class__':
                     setattr(self, key, value)
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
 
         else:
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
             models.storage.new(self)
