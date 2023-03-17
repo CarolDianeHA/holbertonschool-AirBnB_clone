@@ -39,9 +39,9 @@ class FileStorage:
     def reload(self):
         """Deserialize the json file."""
         if os.path.exists(FileStorage.__file_path):
-            with open(self.__file_path, mode='r', encoding='utf-8') as file:
+            with open(FileStorage.__file_path, mode='r', encoding='utf-8') as file:
                 load = file.read()
                 new_dict = json.loads(load)
                 for key, value in new_dict.items():
-                    self.__objects[key] = BaseModel(**value)
+                    FileStorage.__objects[key] = BaseModel(**value)
             return
