@@ -31,7 +31,7 @@ class FileStorage:
         """Serialize objects to the Json file."""
         objects_dict = {}
 
-        with open(FileStorage.__file_path, mode='w', encoding='utf-8') as file:
+        with open(FileStorage.__file_path, mode='w') as file:
             for key, value in FileStorage.__objects.items():
                 objects_dict[key] = value.to_dict()
             json.dump(objects_dict, file, indent=2)
@@ -39,7 +39,7 @@ class FileStorage:
     def reload(self):
         """Deserialize the json file."""
         if os.path.exists(FileStorage.__file_path):
-            with open(FileStorage.__file_path, mode='r', encoding='utf-8') as file:
+            with open(FileStorage.__file_path, mode='r') as file:
                 load = file.read()
                 new_dict = json.loads(load)
                 for key, value in new_dict.items():
