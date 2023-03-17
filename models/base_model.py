@@ -12,6 +12,7 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Instances of the base model class.
+
         Args:
             id: unique identification.
             created_at: datetime - datetime when an instance is created.
