@@ -28,13 +28,45 @@ Next Phases:
 
 ![diagram](https://github.com/CarolDianeHA/holbertonschool-AirBnB_clone/blob/caroldiane/image/Project%20Diagram.png)
 
-## Console commands
+## Console commands definition and example
 
 * `create` - Creates a new instance of BaseMode, saves it to Json file, prints id and manage some errors.
+
+```bash
+(hbnb)create BaseModel
+c915dc4c-4c8c-422e-8044-f2496715991b
+(hbnb)
+```
+
 * `show` - Prints the string representation of an instance based on the class name and id.
+
+```bash
+(hbnb)show BaseModel c915dc4c-4c8c-422e-8044-f2496715991b
+[BaseModel] (c915dc4c-4c8c-422e-8044-f2496715991b) {'id': 'c915dc4c-4c8c-422e-8044-f2496715991b', 'created_at': datetime.datetime(2023, 3, 16, 21, 26, 24, 222086), 'updated_at': datetime.datetime(2023, 3, 16, 21, 26, 24, 222101)}
+(hbnb)
+```
+
 * `destroy` - Deletes an instance based on the class name and id, and saves the change into the Json file.
+
+```bash
+(hbnb)destroy BaseModel c915dc4c-4c8c-422e-8044-f2496715991b
+(hbnb)
+```
+
 * `all` - Prints all string representation of all instances based or not on the class name.
+
+```bash
+(hbnb)all BaseModel
+["[BaseModel] (bf3e683b-05d5-4868-af47-8eac82dd0e38) {'id': 'bf3e683b-05d5-4868-af47-8eac82dd0e38', 'created_at': datetime.datetime(2023, 3, 16, 21, 12, 9, 863447), 'updated_at': datetime.datetime(2023, 3, 16, 21, 12, 9, 863447), 'first_name': 'Betty', 'last_name': 'Bar', 'email': 'airbnb@mail.com', 'password': 'root'}"]
+(hbnb)
+```
+
 * `update`- Updates an instance based on the class name and id by adding or updating attributes, and save the changes into the Json file.
+
+```bash
+(hbnb)update User 794075e0-20b4-491b-9ff3-6f7d389bbe4b last_name "Holberton"
+(hbnb)
+```
 
 ## Execution
 
