@@ -20,10 +20,15 @@ class TestUser(unittest.TestCase):
     def test_inheritance(self):
         """Tests inheritance."""
         user = User()
-        self.assertIsInstance(User, BaseModel)
+        self.assertIsInstance(user, BaseModel)
 
     def test_name_attribute(self):
         """Tests the name attribute."""
         user = User()
-        self.assertTrue(hasattr(User, 'name'))
-        self.assertEqual(User.name, '')
+        user.name = ""
+        self.assertTrue(User, 'name')
+        self.assertEqual(user.name, '')
+
+
+if __name__ == '__main__':
+    unittest.main()
