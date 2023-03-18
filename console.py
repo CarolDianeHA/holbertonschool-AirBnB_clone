@@ -34,17 +34,20 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing on empty line."""
         pass
 
-    def do_create(self, line):
+    def do_create(self, arg):
         """Create a new object."""
-        arg = line.split()
         if len(arg) == 0:
             print("** class name missing **")
-        elif arg[0] not in classGroup.keys():
+        elif arg not in classGroup.keys():
             print("** class doesn't exist **")
         else:
-            new = BaseModel()
-            print(new.id)
-            models.storage.save()
+            for key, value in classGroup.items():
+                if arg == key:
+                    new = classGroup[arg]()
+                    print(new.id)
+                    models.storage.new(new)
+                    models.storage.save()
+            return
 
     def do_show(self, arg):
         """Show name and id of the instance."""
@@ -112,19 +115,18 @@ class HBNBCommand(cmd.Cmd):
             if key not in obj_dict:
                 print("** no instance found **")
                 return
-
-            obj = obj_dict[key]
             if len(args) == 2:
                 print("** attribute name missing **")
                 return
             if len(args) == 3:
                 print("** value missing **")
                 return
-
+            obj = obj_dict[key]
             setattr(obj, args[2], type(getattr(obj, args[2]))(args[3]))
             obj.save()
         except AttributeError:
-            obj.save.append()
+            setattr(obj, args[2], args[3])
+            models.storage.save()
         except IndexError:
             print("** instance id missing **")
         except NameError:
