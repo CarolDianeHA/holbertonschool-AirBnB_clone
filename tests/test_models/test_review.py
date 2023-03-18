@@ -1,18 +1,20 @@
-#!/usr/bin/python3
-"""Test for Review Class."""
 import unittest
 from models.review import Review
 
 
 class TestReview(unittest.TestCase):
-    """Test instances and methods from Review class."""
 
-    a = Review()
+    def test_place_id(self):
+        review = Review()
+        self.assertEqual(review.place_id, "")
 
-    def test_class_exists(self):
-        """Test if class exists."""
-        res = "<class 'models.review.Review'>"
-        self.assertEqual(str(type(self.a)), res)
+    def test_user_id(self):
+        review = Review()
+        self.assertEqual(review.user_id, "")
+
+    def test_text(self):
+        review = Review()
+        self.assertEqual(review.text, "")
 
 
 if __name__ == '__main__':
