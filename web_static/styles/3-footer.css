@@ -16,3 +16,7 @@ footer p {
     align-items: center;
     display: flex;
 }
+
+#special {
+    position: relative;
+}
